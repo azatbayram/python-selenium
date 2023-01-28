@@ -10,14 +10,14 @@ class WebDriver:
 
     def getDriver(self,browserType):
 
-        driver=None
+        self.driver=None
         self.browserType=browserType
 
         if(self.browserType.lower()=="chrome"):
-            driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager.install()))
+            self.driver=webdriver.Chrome(service=ChromeService(ChromeDriverManager.install()))
         elif(self.browserType.lower()=="firefox"):
-            driver=webdriver.Firefox(service=FirefoxService(GeckoDriverManager.install()))
+            self.driver=webdriver.Firefox(service=FirefoxService(GeckoDriverManager.install()))
         elif(self.browserType.lower()=="ie"):
-            driver=webdriver.Ie(service=IEService(IEDriverManager.install()))
+            self.driver=webdriver.Ie(service=IEService(IEDriverManager.install()))
 
-        return driver
+        return self.driver
