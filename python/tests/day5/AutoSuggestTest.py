@@ -14,6 +14,9 @@ class AutoSuggestTest():
     departFrom.click()
     departFrom.send_keys("New Delhi")
     ActionChains(driver).key_down(Keys.ENTER).perform()
+    #alert = driver.switch_to.alert
+    #time.sleep(2)
+    #alert.accept()
 
 
     time.sleep(5)
